@@ -31,7 +31,7 @@ for row in data['hits']['hits']:
 
 arrayTuple = tuple(arrays)
 data = np.vstack(arrayTuple)
-clt = DBSCAN(metric="euclidean", n_jobs=2, min_samples=2, eps=0.4)
+clt = DBSCAN(metric="euclidean", n_jobs=2, min_samples=2, eps=0.35)
 clt.fit(data)
 labelIDs = np.unique(clt.labels_) 
 numUniqueFaces = len(np.where(labelIDs > -1)[0])

@@ -6,7 +6,7 @@ import cv2
 import os
 
 ap = argparse.ArgumentParser()
-ap.add_argument("-i", "--dataset", required=True, help="Path to your local dataset of images")
+ap.add_argument("-d", "--dataset", required=True, help="Path to your local dataset of images")
 args = vars(ap.parse_args())
 print("[*] Processing faces...")
 imagePaths = list(paths.list_images(args["dataset"]))

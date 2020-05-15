@@ -24,7 +24,7 @@ distances, indices = nbrs.kneighbors(data)
 distances = np.sort(distances, axis=0)
 distances = distances[:,1]
 mean = distances.mean()
-print("Use this value for eps: "+mean)
+print("Use this value for eps: "+str(mean))
 
 plt.plot(distances)
 plt.show()

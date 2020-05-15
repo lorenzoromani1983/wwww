@@ -48,7 +48,8 @@ for labelID in labelIDs:
             top, right, bottom, left = coords[i]
             face = image[top:bottom, left:right]
             newFace = cv2.rectangle(image, (left,bottom), (right,top), (0, 255, 66), 2)
-            faceFinal = cv2.putText(newFace, str(labelID), org=(left+5,bottom+30), fontFace=cv2.FONT_HERSHEY_SIMPLEX, fontScale=1, color=(0, 255, 66), thickness=2)
+            faceFinal = cv2.putText(newFace, str(labelID), org=(left+5,bottom+30), fontFace=cv2.FONT_HERSHEY_SIMPLEX, 
+				    fontScale=1, color=(0, 255, 66), thickness=2)
             newFile = '{!s}/{!s}'.format(output, os.path.basename(paths[i]))
 
             if path.exists(newFile):
@@ -60,7 +61,8 @@ for labelID in labelIDs:
                 top, right, bottom, left = coords[i]
                 face = image[top:bottom, left:right]
                 newFace = cv2.rectangle(image, (left,bottom), (right,top), (0, 255, 66), 2)
-                faceFinal = cv2.putText(newFace, str(labelID), org=(left+5,bottom+30), fontFace=cv2.FONT_HERSHEY_SIMPLEX, fontScale=1, color=(0, 255, 66), thickness=2)
+                faceFinal = cv2.putText(newFace, str(labelID), org=(left+5,bottom+30), fontFace=cv2.FONT_HERSHEY_SIMPLEX, 
+					fontScale=1, color=(0, 255, 66), thickness=2)
                 newFile = '{!s}/{!s}'.format(output, os.path.basename(paths[i]))
                 cv2.imwrite(newFile, faceFinal)
                 print("Identity n. "+ str(labelID) + " > " + newFile)

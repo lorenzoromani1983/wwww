@@ -25,7 +25,7 @@ distances = np.sort(distances, axis=0)
 distances = distances[:,1]
 mean = distances.mean()
 print("You may try this value for eps: "+str(mean))
-print("But remind that 0.35 could work much better!")
+print("But remind that values between 0.35 and 0.37 could work much better!")
 
 plt.plot(distances)
 plt.show()

@@ -38,7 +38,6 @@ _init_()
 
 arrays = [np.array(x) for x in mean_values]
 mean_list = [np.mean(k) for k in zip(*arrays)]
-print(sum(mean_list))
 
 print("[*] Searching for matches...")
 

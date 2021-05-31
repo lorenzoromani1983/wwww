@@ -14,8 +14,8 @@ es = Elasticsearch('localhost:9200')
 G=networkx.DiGraph()
 data = es.search(index="karatbars_cnn", size=10000, body={"query": {"match_all": {}}}, request_timeout=1000)
 cwd = sys.path[0]
-output = cwd+"\\output"
-temp_dir = cwd+"\\temp"
+output = cwd+"/output"
+temp_dir = cwd+"/temp"
 
 arrays = []
 paths = []

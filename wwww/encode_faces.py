@@ -13,7 +13,7 @@ imagePaths = list(paths.list_images(args["dataset"]))
 
 es = Elasticsearch([{'host': 'localhost', 'port': '9200'}])
 
-def _init_():
+def encode():
     for (i, imagePath) in enumerate(imagePaths):
         try:
             print("[*] Encoding image {}/{}".format(i + 1,len(imagePaths)))
@@ -34,4 +34,4 @@ def _init_():
             vector = {"my_text" : path, "my_vector" : vector_values, "text" : filename, "coord" : coord}
             es.index(index='face_recognition', body=vector, doc_type='_doc')
 
-_init_()
+encode()

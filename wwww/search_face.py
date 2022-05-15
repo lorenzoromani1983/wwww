@@ -16,7 +16,7 @@ es = Elasticsearch([{'host': 'localhost', 'port': '9200'}])
 
 mean_values = []
 
-def _init_():
+def search():
     for (i, imagePath) in enumerate(imagePaths):
         try:
             print("[*] Encoding input image(s) {}/{}".format(i + 1,len(imagePaths)))
@@ -34,7 +34,7 @@ def _init_():
             vector_values = list(vectors)
             mean_values.append(vector_values)
 
-_init_()
+search()
 
 arrays = [np.array(x) for x in mean_values]
 mean_list = [np.mean(k) for k in zip(*arrays)]

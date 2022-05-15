@@ -38,7 +38,7 @@ numUniqueFaces = len(np.where(labelIDs > -1)[0])
 
 print("[*] Number of unique faces: {}".format(numUniqueFaces))
 
-def __init__():
+def cluster():
 
     for labelID in labelIDs:
         if labelID > -1:
@@ -85,7 +85,7 @@ def __init__():
                     G.add_edge(str(labelID),video) 
                     networkx.write_gexf(G, "face_graph.graphml")
 
-__init__()
+cluster()
 
 
         
